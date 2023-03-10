@@ -10,7 +10,7 @@
 
 /* Task 2: Let's work on some basic stylings that we want to apply to all elements of your code via inheritance. Which selector do we need for this? */
 
- *{
+ html{
   font-family: monospace;
   font-size: 1rem;
   line-height: 1.5;
@@ -75,8 +75,8 @@ section {
 .subtitle {
   text-decoration: underline solid gold;
   text-decoration-thickness: 3px;
-  text-underline-offset: 0.2em;
-  display: ;
+  text-underline-offset: 0.5em;
+  display: inline-block;
 }
 
 .favourite-pokemon {
@@ -93,9 +93,9 @@ ul
   padding-left: 10px;
 }
 
-/* add selector */
+li
  {
-  padding-left: /* add value */ ;
+  padding-left: 10px ;
 }
 
 /* ------- The End -------- */
