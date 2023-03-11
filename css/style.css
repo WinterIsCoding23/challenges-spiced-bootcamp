@@ -1,0 +1,14 @@
+/*Continue to build your personal website. Include some of the selectors you learned today. For example:
+
+- create a decorator element with a ::before selector
+- style the :link, :visited, :active, :hover state of your links
+- use combinators instead of classes if possible: footer ul > li instead of .footer-list-item
+
+❗️ Remember to work with branches and pull requests!
+
+💡 Hint: Styling everything with combinators is equally as bad as styling everything with classes. Try to find a good balance between both.
+*/
+
+* {
+    box-sizing: border-box;
+}
