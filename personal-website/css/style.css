@@ -12,11 +12,16 @@
 * {
     box-sizing: border-box;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;px;
     background-color: aliceblue;
 }
 
 nav > ul {
     list-style-type:none;
+}
+
+li:nth-child(1) {
+    font-weight: bold;
 }
 
 header a:link {
@@ -54,10 +59,18 @@ section > img {
     margin-right: 10px;
 }
 
+img::after {
+    content:"Always on the watch.."
+}
+
 header > p {
     text-align:left;
 }
 
 main {
+
+}
+
+footer {
 
 }
