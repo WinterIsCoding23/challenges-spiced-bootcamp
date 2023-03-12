@@ -1,0 +1,87 @@
+/*Continue to build your personal website. Include some of the selectors you learned today. For example:
+
+- create a decorator element with a ::before selector
+- style the :link, :visited, :active, :hover state of your links
+- use combinators instead of classes if possible: footer ul > li instead of .footer-list-item
+
+❗️ Remember to work with branches and pull requests!
+
+💡 Hint: Styling everything with combinators is equally as bad as styling everything with classes. Try to find a good balance between both.
+*/
+
+* {
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;px;
+    background-color: aliceblue;
+}
+
+nav > ul {
+    list-style-type:none;
+}
+
+li:nth-child(1) {
+    font-weight: bold;
+}
+
+header a:link {
+    text-decoration: none;
+}
+
+header a:visited {
+    color:green;
+}
+
+header a:hover {
+    color:goldenrod;
+    text-decoration: underline;
+}
+
+nav a::before {
+    content: '🥁';
+}
+
+section a::before {
+    content: '';
+    background-image: "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png";
+    display: inline-block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+}
+/*https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg 
+*/
+
+header {
+}
+
+header > h1, p {
+    /*margin:0;*/
+}
+
+h1 {
+    background-image: linear-gradient(360deg, rgba(255,0,0,0), rgba(0,150,255,0.5));
+    margin-bottom: 20px;
+}
+
+section > img {
+    border-radius: 10px;
+    float: left;
+    margin-right: 10px;
+}
+
+/*img::after {
+    content:'Always on the watch..';
+}*/
+
+header > p {
+    text-align:left;
+}
+
+main {
+
+}
+
+footer > p {
+    font-size: small;
+}
