@@ -15,6 +15,27 @@
     background-color: aliceblue;
 }
 
+nav > ul {
+    list-style-type:none;
+}
+
+header a:link {
+    text-decoration: none;
+}
+
+header a:visited {
+    color:green;
+}
+
+header a:hover {
+    color:goldenrod;
+    text-decoration: underline;
+}
+
+a::before {
+    content: '🔗';
+}
+
 header {
 }
 
@@ -27,7 +48,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-header > img {
+section > img {
     border-radius: 10px;
     float: left;
     margin-right: 10px;
@@ -35,4 +56,8 @@ header > img {
 
 header > p {
     text-align:left;
+}
+
+main {
+
 }
