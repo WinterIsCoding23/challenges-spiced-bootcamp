@@ -71,6 +71,6 @@ main {
 
 }
 
-footer {
-
+footer > p {
+    font-size: small;
 }
