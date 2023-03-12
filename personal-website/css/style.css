@@ -37,9 +37,20 @@ header a:hover {
     text-decoration: underline;
 }
 
-a::before {
-    content: '🔗';
+nav a::before {
+    content: '🥁';
 }
+
+section a::before {
+    content: '';
+    background-image: "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png";
+    display: inline-block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+}
+/*https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg 
+*/
 
 header {
 }
@@ -59,9 +70,9 @@ section > img {
     margin-right: 10px;
 }
 
-img::after {
-    content:"Always on the watch.."
-}
+/*img::after {
+    content:'Always on the watch..';
+}*/
 
 header > p {
     text-align:left;
