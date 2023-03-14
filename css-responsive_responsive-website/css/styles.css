@@ -245,9 +245,31 @@ width, etc. */
 /* Media Query Tablet */
 /* --- */
 
+@media screen and (min-width:768px) {
+  .card-section {
+    flex-direction: row;
+    flex-wrap:wrap;
+  }
+
+  .card-section > * {
+    width: 45% 
+  }
+}
+
 /* --- */
 
 /* Media Query Desktop */
 /* --- */
-/* Replace this comment with your media query. */
+
+@media screen and (min-width:1024px) {
+  .card-section {
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+  }
+
+  .card-section > * {
+    width: 45% 
+  }
+}
 /* --- */
