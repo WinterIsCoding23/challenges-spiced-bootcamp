@@ -249,10 +249,11 @@ width, etc. */
   .card-section {
     flex-direction: row;
     flex-wrap:wrap;
+    justify-content: space-around;
   }
 
   .card-section > * {
-    width: 45% 
+    width: 45%;
   }
 }
 
@@ -261,15 +262,15 @@ width, etc. */
 /* Media Query Desktop */
 /* --- */
 
-@media screen and (min-width:1024px) {
-  .card-section {
-    flex-direction: row;
-    flex-wrap:wrap;
-    justify-content: center;
-  }
-
-  .card-section > * {
-    width: 45% 
+  @media screen and (min-width: 1024px) {
+  .--forest {
+    width: 100%;
+    height: 50vh;
   }
 }
+
+
 /* --- */
+
+
+
