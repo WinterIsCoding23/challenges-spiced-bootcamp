@@ -21,6 +21,10 @@ body {
   gap: 1rem;
   padding: 1rem;
   /* Add styles here */
+  grid-template-areas: 
+  "left-top center-top right-top"
+  "left-bottom center-top right-bottom"
+  "left-bottom center-bottom right-bottom";
 }
 
 .image-board__image {
@@ -32,25 +36,36 @@ body {
 }
 
 .image-board__image--1 {
-  /* Add styles here */
+  /*order:1;*/
+  grid-area:left-top;
 }
 
 .image-board__image--2 {
   /* Add styles here */
+  /*order:2;*/
+  grid-area:center-top;
 }
 
 .image-board__image--3 {
   /* Add styles here */
+  /*order:3;*/
+  grid-area:right-top;
 }
 
 .image-board__image--4 {
   /* Add styles here */
+  /*order:4;*/
+  grid-area:left-bottom;
 }
 
 .image-board__image--5 {
   /* Add styles here */
+  /*order:5;*/
+  grid-area:center-bottom;
 }
 
 .image-board__image--6 {
   /* Add styles here */
+  /*order:6;*/
+  grid-area:right-bottom;
 }
