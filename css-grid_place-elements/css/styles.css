@@ -1,12 +1,12 @@
 /*
 Use grid to fulfill the following tasks:
 
-[ ] - .element__1 should start at column three and go until column five
-[ ] - .element__2 should start at column five and go until the end
-[ ] - .element__5 should span two columns and two rows
-[ ] - .element__8 should span two rows
-[ ] - .element__fish should be in row one and span the entire grid width
-[ ] - .element__20 should start at row six and span two rows
+[x ] - .element__1 should start at column three and go until column five
+[x ] - .element__2 should start at column five and go until the end
+[x ] - .element__5 should span two columns and two rows
+[x ] - .element__8 should span two rows
+[x ] - .element__fish should be in row one and span the entire grid width
+[x ] - .element__20 should start at row six and span two rows
 
 */
 
@@ -43,29 +43,40 @@ body {
 .element-1 {
   background-color: #3a67a4;
   /* Add styles here */
+  grid-column-start: 3;
+  grid-column-end: 5;
 }
 
 .element-2 {
   background-color: #3a67a4;
   /* Add styles here */
+  grid-column-start: 5;
+  grid-column-end: 10;
 }
 
 .element-5 {
   background-color: #3a67a4;
   /* Add styles here */
+  grid-column: span 2;
+    grid-row:span 2;
 }
 
 .element-8 {
   background-color: #3a67a4;
   /* Add styles here */
+  grid-row: span 2;
 }
 
 .element-fish {
   background-color: #3a67a4;
   /* Add styles here */
+  grid-row-start: 1;
+  grid-column-start:1; 
+  grid-column-end:-1;
 }
 
 .element-20 {
   background-color: #3a67a4;
   /* Add styles here */
+  grid-row:5 / span 2;
 }
