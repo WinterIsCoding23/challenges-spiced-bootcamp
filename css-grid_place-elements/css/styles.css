@@ -51,7 +51,7 @@ body {
   background-color: #3a67a4;
   /* Add styles here */
   grid-column-start: 5;
-  grid-column-end: 10;
+  grid-column-end: -1;
 }
 
 .element-5 {
