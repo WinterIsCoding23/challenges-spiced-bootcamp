@@ -79,25 +79,25 @@ increaseByOneButton.addEventListener("click", () => {
 
 increaseByFiveButton.addEventListener("click", () => {
   // 8. Increase the value of "operand1" by 5. Log the new value to the console.
-  console.log(operand1+5);
+  console.log(operand1+=5);
 });
 
 decreaseByOneButton.addEventListener("click", () => {
   // 7. Decrease the value of "operand1" by 1. Log the new value to the console.
-  console.log (operand1-1);
+  console.log (operand1-=1);
 });
 
 decreaseByFiveButton.addEventListener("click", () => {
   // 8. Decrease the value of "operand1" by 5. Log the new value to the console.
-  console.log(operand1-5);
+  console.log(operand1-=5);
 });
 
 multiplyByTwoButton.addEventListener("click", () => {
   // 11. Multiply the value of "operand1" by 2. Log the new value to the console.
-  console.log (operand1*2);
+  console.log (operand1*=2);
 });
 
 divideByTwoButton.addEventListener("click", () => {
   // 12. Divide the value of "operand1" by 2. Log the new value to the console.
-  console.log(operand1/2);
+  console.log(operand1/=2);
 });
