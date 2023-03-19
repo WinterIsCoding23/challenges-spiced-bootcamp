@@ -9,12 +9,9 @@
 💡 Hint: Styling everything with combinators is equally as bad as styling everything with classes. Try to find a good balance between both.
 */
 
-* {
-    box-sizing: border-box;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 16px;
-    background-color: aliceblue;
-}
+
+
+
 
 nav > ul {
     list-style-type:none;
