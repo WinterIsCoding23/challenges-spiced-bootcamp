@@ -7,10 +7,6 @@ Console Log `result`
 const input = true;
 let result; 
 
-if (input === true) {
-    result = "Yes";
-} else {
-    result = "No";
-}
+input === true ? result = "Yes" : result = "No";
 
 console.log (result);
