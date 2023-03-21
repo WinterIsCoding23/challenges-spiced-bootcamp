@@ -9,15 +9,26 @@ switch (typeof data) {
     case null:
         console.log ("null!");
         break;
-    case "number":
-        console.log ("number!");
-        break;
-    case isNaN(data):
-        console.log ("not a number!");
-        break;
     case "string":
         console.log ("string!");
         break;
+    case "number":
+       if (Number.isNaN(data)) {
+         console.log ("not a number!");
+         break;
+       } else {
+        console.log (data, " is a number!") 
+        }
+        break; 
+    case "object":
+       if (data === null) {
+           console.log (data, " null!");
+       } else if (Array.isArray (data)) {
+           console.log (data, " array!");
+       } else {
+           console.log (data, " object!");
+       }
+       break;       
     case true || false:
         console.log ("boolean!");
         break;
@@ -26,13 +37,7 @@ switch (typeof data) {
         break;
     case "function":
         console.log ("function!");
-        break;
-    case typeof null:
-        console.log ("object!");
-        break;
-    case Array.isArray(data):
-        console.log ("array!");
-        break;
+        break;    
     default: 
         console.log ("I have no idea!");
 }
