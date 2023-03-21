@@ -9,6 +9,12 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+const title = "The Book";
+const author = "James Author";
+let rating = 10;
+let numberOfSales = 500; 
+
+// OBJECT!!
 
 // --^-- write your code here --^--
 
@@ -25,6 +31,11 @@ Then log all variables to the console again.
 */
 
 // --v-- write your code here --v--
+console.log (title, author, rating, numberOfSales);
+numberOfSales = 1000;
+rating = 12; 
+
+console.log(title, author, rating, numberOfSales);
 
 // --^-- write your code here --^--
 
@@ -37,5 +48,15 @@ Then log all variables to the console again.
 */
 
 // --v-- write your code here --v--
+function logBookData () {
+  console.log(title, author, rating, numberOfSales);
+}
+logBookData ();
+
+numberOfSales = 2000;
+logBookData ();
+
+numberOfSales = 10000n;
+logBookData ();
 
 // --^-- write your code here --^--
