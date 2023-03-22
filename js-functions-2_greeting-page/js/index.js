@@ -36,18 +36,15 @@ function getGreeting() {
 }
 
 function getDayColor() {
-  //let day = new Date().getDay();
-  let day = "sunday"; 
+  let day = new Date().getDay();
 
-  if (day === "monday") {
+  if (day === 1) {
     return "darkgray";
-  } else if (day === "tuesday" || "wednesday" || "thursday" || "friday") {
+  } else if (day >= 2 && day <= 5) {
     return "lightblue"; 
-  } else if (day === "saturday" || "sunday") {
+  } else if (day === 0 || day === 6) {
     return "hotpink";
-  } else {
-    return "white";
-  }
+  } 
 }
 
 display.textContent = getGreeting();
