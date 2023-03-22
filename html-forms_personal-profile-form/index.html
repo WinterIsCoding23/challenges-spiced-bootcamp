@@ -10,6 +10,29 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <section></section>
+    <section>
+      <h1>Create your Personal Profile</h1>
+      <form>
+        <p>We want to get to know you! Please enter your personal information.</p>
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="firstName">First Name:</label>
+          <input name="firstName" id="firstName">
+          <label for="lastName">Last Name:</label>
+          <input name="lastName" id="lastName">
+          <label for="yourBirthday">Your Birthday:</label>
+          <input name="yourBirthday" id="yourBirthday">
+          <label for="yourBirthday">Your Birthday:</label>
+          <input type="date" timezone="[[timezone]]" name="yourBirthday" id="yourBirthday" />  
+        </fieldset>
+        <p>Can you tell us a little bit more? We want to annoy you with unwanted ads.</p>
+        <fieldset>
+          <legend>Further Information</legend>
+          <label for="favorite-color">Favourite color:</label>
+          <input type="color" name="favorite-color" id="favorite-color" />
+        </fieldset>
+      </form>
+        
+    </section>
   </body>
 </html>
