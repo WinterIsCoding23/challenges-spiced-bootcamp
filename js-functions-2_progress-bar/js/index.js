@@ -29,32 +29,7 @@ function calculateScrollPercentage () {
   return percentage + "%";
 }
 
-document.addEventListener ("scroll"), () {
+document.addEventListener ("scroll", () => {
   const percentage = calculateScrollPercentage (); 
-  progressBar.getElementsByClassName.width = percentage;
-  element.style.width = '10px;'
-}
-
-
-
-
-
-
-
-// function calculateScrollPercentage() {
-//   const yPosition = window.scrollY
-//   const viewportHeight = document.body.clienthHeight - window.innerHeight
-//   console.log (yPosition, viewportHeight)
-//   const percentage = (yPosition / viewportHeight) * 100
-//   return percentage + "%"
-// }
-
-
-// document.addEventListener("scroll"), () => {
-//   console.log "scrolling"
-//   const percentage = calculateScrollPercentage()
-//   console.log (percentage)"
-//   progressBar.getElementsByClassName.width = percentage
-// })
-
-
+  progressBar.style.width = percentage;  
+})
