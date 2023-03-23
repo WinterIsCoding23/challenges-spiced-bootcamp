@@ -34,7 +34,30 @@ form.addEventListener("submit", (event) => {
   console.log ("numA, numB, operation", numA, numB, operation);
   */
 
+  const numberA = parseInt (form.numberA.value);
+  const numberB = parseInt (form.numberB.value);
+  console.log(numberA, numberB, form.numberA.value, form.numberB.value);
+
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData);
+  let operator = data.operator;
+
   let result;
+
+  if (data.operator === "addition") {
+    result = add (numberA, numberB);
+  } else if (operator === "subtraction") {
+    result = subtract (numberA, numberB);
+  } else if (operator === "multiplication") {
+    result = multiply (numberA, numberB);
+  } else if (operator === "division" && !(numberB === 0)) {
+    result = divide (numberA, numberB)
+  } else if (operator === "division" && numberB === 0) {
+    result = "If you try to do this one more time...!";
+  }
+
+
+  
 
   // --v-- write your code here --v--
 
