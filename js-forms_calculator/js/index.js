@@ -21,6 +21,18 @@ function divide(a, b) {
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  /*const numA = parseInt(form.numberA.value);
+  const numB = parseInt(form.numberB.value);
+  console.log(numA, numB);*/
+
+  /*
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries.apply(formData);
+  const numA = parseInt(data.numberA);
+  const numB = parseInt(data.numberB);
+  const operation = data.operator;
+  console.log ("numA, numB, operation", numA, numB, operation);
+  */
 
   let result;
 
