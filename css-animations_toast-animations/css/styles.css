@@ -15,13 +15,21 @@ body {
 
 .start-button {
   padding: 1rem 2rem;
-  background: #e5430f;
+  background: #e5430f;  
   color: #e4e8f0;
   border-radius: 14px;
   border: none;
   font-size: 1.5rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  /* transition: cubic-bezier(.04,-0.67,1,1.68), background 2s, color 5s, box-shadow 2s ease-out 3s; */
 }
+  
+/*
+.start-button:active {
+  background-color: rgb(71, 212, 94);
+  transition: color 2s, background-color 2s;
+}
+*/
 
 .start-button:hover {
   background-color: #f5521c;
@@ -38,6 +46,24 @@ body {
 }
 
 /* Toast */
+
+@keyframes toast {
+  from {
+    background-color: #e4e8f0;
+  } 
+  25% {
+    background-color: aqua;
+  }
+  50% {
+    background-color: aquamarine;
+  } 
+  75% {
+    background-color: #f5521c;
+  } 
+  to {
+    background-color: #e5430f;
+  }
+}
 
 .toast {
   position: absolute;
