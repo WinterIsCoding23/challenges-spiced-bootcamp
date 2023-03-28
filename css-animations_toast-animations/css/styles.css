@@ -49,19 +49,24 @@ body {
 
 @keyframes toast {
   from {
-    background-color: #e4e8f0;
+    background: #e4e8f0;
+    top: 20px;
   } 
   25% {
-    background-color: aqua;
+    background: aqua;
+    top: 40px;
   }
   50% {
-    background-color: aquamarine;
+    background: aquamarine;
+    top: 100px;
   } 
   75% {
-    background-color: #f5521c;
+    background: #f5521c;
+    top: 250px;
   } 
   to {
-    background-color: #e5430f;
+    background: #e5430f;
+    top: 400px;
   }
 }
 
