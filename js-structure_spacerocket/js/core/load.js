@@ -1,5 +1,6 @@
 import { getRocket } from "./rocket.js";
 
+
 export function loadPayload(satellite) {
   const rocket = getRocket();
   if (rocket.liftoff || rocket.countdown > 0) {
