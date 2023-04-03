@@ -19,14 +19,25 @@ async function checkIfApiIsAvailable() {
    * is okay and false if it is not.
    **/
   // --v-- write your code here --v--
-  try {
-    // if so, the icon should display ✅
-    icon = "✅";
-  } catch (error) {
-    // if not, the icon should display ❌
-    icon = "❌";
-  }  
-  
+
+    try {
+      icon.textContent = "⏳";
+      const response = await fetch(apiStatusUrl);      
+      const data = await response.json(); 
+        
+      if (response.ok) {
+        // Success (Good Response)
+        icon.textContent = "✅";
+        console.log(data);
+      } else {
+        // Failure (Bad Response)
+        icon.textContent = "❌";
+        console.error("Bad Response");
+      }
+    } catch (error) {
+      // Failure (Network error, etc)
+      console.error("An Error occurred");
+    }
 
   // --^-- write your code here --^--
 }
@@ -36,25 +47,3 @@ button.addEventListener("click", () => {
   checkIfApiIsAvailable();
 });
 
-
-/*
-## Task
-
-Look at the [`js/index.js`](./js/index.js) file: There is a function called `checkIfAPIIsAvailable`; inside of this function, the `response` variable is declared with the result of `fetch(api)`.
-
-The function is called everytime you click the button.
-
-Your task is to refactor `checkIfAPIIsAvailable` so that - depending on `response.ok` - the icon displays either ✅ or ❌.
-
-You can use the following hints as guideline:
-
-- `fetch()` returns a promise, so make sure to wait for the result.
-- Check whether 'response.ok' is truthy;
-  - if so, the icon should display ✅
-  - if not, the icon should display ❌
-- Use a `try...catch` block.
-
-## Bonus:
-
-Can you display a '⏳' icon while waiting for the response?
-*/
