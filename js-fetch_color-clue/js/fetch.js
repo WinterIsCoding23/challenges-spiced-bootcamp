@@ -18,6 +18,33 @@ export async function fetchNewColor() {
    */
 
   // --v-- your code here --v--
+      try {
+      const response = await fetch(colorApiUrl);
+      const data = await response.json();
+      console.log(data)
 
-  // --^-- your code here --^--
+      const colorCode = data.name.closest_named_hex; 
+      const colorName = data.name.value;
+  
+      if (response.ok) {
+        setColorToGuess(colorCode, colorName);
+      } else {
+        console.error("Bad Response");
+      }
+    } catch (error) {
+      console.error("An Error occurred");
+    }
+    // --^-- your code here --^--
 }
+
+/*
+Check out the [`js/fetch.js`](./js/fetch.js) file: There is a `fetchNewColor()` function which creates a random hex code and creates the correct url to fetch data from the Color API.
+
+Your task is to implement the fetch functionality:
+
+1. Use the `fetch()` function to get data from the Color API.
+2. Use the `.json()` method to parse the body of the response and convert it into an object.
+3. Inspect the parsed object (e.g. by logging it to the console) and find the hex value and name of the closest named color.
+4. Call the `setColorToGuess()` function with the hex value and name of the closest named color.
+5. Guess colors! 🎉
+*/
