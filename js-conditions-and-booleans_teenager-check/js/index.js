@@ -20,6 +20,8 @@ button.addEventListener("click", () => {
 // ...works also with ...output.innerHTML = ... : output.innerHTML = ...
 
 // Alternative: 
+  13 < age && age < 19 ? output.innerHTML = "You are a teen." : output.innerHTML = "You are not a teen.";
+
   /*if (13 < age && age < 19) {
     output.innerHTML = "You are a teen.";
   } else {
