@@ -2,5 +2,14 @@ import React from "react";
 import "./styles.css";
 
 export default function App() {
-  return <div>Replace me with your Component!</div>;
+  return <HelloWorldArticle />;
 }
+
+function HelloWorldArticle() {
+  return <article>
+    <h1>This is a header</h1>
+    <p>lorem ipsum etc. and Im annoyed that lorem ipsum doesnt work.
+    </p>
+  </article>
+}
+
