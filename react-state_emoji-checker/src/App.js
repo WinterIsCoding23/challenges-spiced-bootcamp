@@ -1,10 +1,20 @@
 import React from "react";
 import "./styles.css";
+import { useState } from "react";
 
 export default function App() {
-  let code = "?";
+  let [code, setCode] = useState("");
+  //let code = "?";
+
+  // function handleClick(){
+  //   setCode(code)
+  // }
 
   const validCode = "🐡🐠🐋";
+
+  function resetCode (){
+    setCode("");
+  }
 
   return (
     <div className="container">
@@ -12,6 +22,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
+            setCode(code + "🐡");
             console.log("Update Code!");
           }}
         >
@@ -22,6 +33,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
+            setCode(code + "🐋");
             console.log("Update Code!");
           }}
         >
@@ -32,6 +44,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
+            setCode(code + "🐠");
             console.log("Update Code!");
           }}
         >
@@ -44,6 +57,7 @@ export default function App() {
       <button
         type="button"
         onClick={() => {
+          resetCode ();
           console.log("Reset Code!");
         }}
       >
@@ -55,3 +69,12 @@ export default function App() {
     </div>
   );
 }
+
+
+/*
+You can use the following hints as a guideline:
+
+- Most importantly, you need to import a built-in React function you'll be using during this challenge.
+- You need to make sure to declare a state variable.
+- Write a `handleClick` function that updates the state variable according to which emoji button was clicked. The `handleClick` function will be called in every onClick of the buttons.
+*/
