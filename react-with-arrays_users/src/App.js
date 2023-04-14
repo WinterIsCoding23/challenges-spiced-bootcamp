@@ -10,9 +10,9 @@ export default function App() {
     <main className="app">
       <Title text="ClientBoard" />
       <div className="app__card-grid">
-        { USERS.map(( user, index ) => {
+        { USERS.map(( user, index) => {
          console.log(index)                                 // index can be named however we want; its part of the .map-method (second optional argument); indexes the newly rendered elements - equal the position of the respective element in the original array  
-        return <Card key={index} user={user} /> 
+        return <Card key={index} user={user}/> 
         })}
       </div>
     </main>
