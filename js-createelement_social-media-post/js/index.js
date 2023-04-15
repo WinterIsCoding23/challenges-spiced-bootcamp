@@ -26,9 +26,9 @@ likeButton.addEventListener("click", handleLikeButtonClick);
   footer.append (button);
 
   // fill in content to the elements
-  paragraph.innerHTML = "Lorem ipsum dolor, sit amet consectetur adipisicing elit.";
-  span.innerHTML = "@username";
-  button.innerHTML = "♥ Like";
+  paragraph.textContent = "Lorem ipsum dolor, sit amet consectetur adipisicing elit.";
+  span.textContent = "@username";
+  button.textContent = "♥ Like";
 
   // styling witch classes
   newPost.classList.add("post");
