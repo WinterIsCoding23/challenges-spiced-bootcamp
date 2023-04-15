@@ -41,6 +41,7 @@ form.addEventListener("submit", (event) => {
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
   let operator = data.operator;
+  console.log("data", data, "operator", operator);
 
   let result;
 
