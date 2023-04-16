@@ -1,20 +1,11 @@
 import React from "react";
 import "./styles.css";
 
-// function handleClick (){
-//   console.log("I hit the button!"); 
-// }
-
-function Button ({ color, disabled, text, backgroundColor, fontSize, padding }) {
-  function handleClick () {
-    console.log("I hit the button!");
-    alert('You clicked me!');
-  }
+function Button ({ color, disabled, text, backgroundColor, fontSize, padding, onClick }) {
   return (
     <button 
       // Task 2: onClick = {() => (console.log("I hit the button"), alert('You clicked me!'))} 
-      // Task 3: 
-      onClick={handleClick}
+      onClick={onClick}
       style={{color, backgroundColor, fontSize, padding}} 
       disabled={disabled}
     >
@@ -24,7 +15,20 @@ function Button ({ color, disabled, text, backgroundColor, fontSize, padding }) 
 }
 
 export default function App() {
-  return <Button  padding="20px" fontSize="35px" disabled={false} backgroundColor= "red" color="green" text="This is a button"/>;
+  function handleClick () {
+    console.log("I hit the button!");
+    alert('You clicked me!');           // How to change background-color onClick??? style={backgroundColor:"blue"} doesnt work...
+  }
+  return (
+    <Button 
+      onClick={handleClick} 
+      padding="20px" 
+      fontSize="35px" 
+      disabled={false} 
+      backgroundColor= "red" 
+      color="green" 
+      text="This is a button"/>
+  )
 }
 
 // Lessons learned: 
