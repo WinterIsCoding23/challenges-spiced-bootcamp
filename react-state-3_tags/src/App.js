@@ -11,19 +11,17 @@ export default function App() {
     setTags([...tags, newTag]);
   }
 
+  function handleDeleteTag(tagToDelete) {
+    console.log(tagToDelete); 
+    setTags(tags.filter((tag) => tag !== tagToDelete));
+  }
+
   return (
     <main className="app">
       <Form onAddTag={handleAddTag}/>
-      <List tags={tags} />
+      <List onDeleteTag={handleDeleteTag} tags={tags} />
     </main>
   );
 }
 
 
-/*
-### Remove a Tag
-
-- In the `App` component, write a `handleDeleteTag` function which receives one parameter, e.g. `tagToDelete`.
-- Call the state setter function and remove the tag from the current state.
-- Pass `handleDeleteTag` to the `List` component using the correct prop name.
-*/
