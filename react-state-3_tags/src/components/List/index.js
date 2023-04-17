@@ -1,6 +1,6 @@
 import "./List.css";
 
-export default function List({ tags, onDeleteTag }) {
+export default function List({ tags, onDeleteTag }) {         // onDeleteTag, tags = props
   return (
     <>
       <h2>Your Tags:</h2>

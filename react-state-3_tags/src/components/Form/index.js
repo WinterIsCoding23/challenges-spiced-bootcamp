@@ -1,6 +1,6 @@
 import "./Form.css";
 
-export default function Form({ onAddTag }) {
+export default function Form({ onAddTag }) {          // onAddTag = prop
   function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
