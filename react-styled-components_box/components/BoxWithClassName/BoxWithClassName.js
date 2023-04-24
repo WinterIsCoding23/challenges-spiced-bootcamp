@@ -7,3 +7,5 @@ export default function BoxWithClassName({ isBlack }) {
     ></div>
   );
 }
+
+// not used, can be deleted
