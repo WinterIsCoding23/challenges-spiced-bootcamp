@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { StyledForm, StyledInputContainer } from "./Form.styled";
 
+import { useImmer } from "use-immer";
+
 export default function Form() {
-  const [mountain, setMountain] = useState({
+  const [mountain, updateMountain] = useImmer({
     name: "Mount Everest",
     values: {
       altitude: 8848,
@@ -12,30 +14,22 @@ export default function Form() {
 
   function handleNameChange(event) {
     //console.log(event.target.value);
-    setMountain({
-      ...mountain, name: event.target.value,
+    updateMountain((draft)=>{
+      draft.name = event.target.value;
     })
   }
 
   function handleAltitudeChange(event) {
     //console.log(event.target.value);
-    setMountain({
-      ...mountain, 
-        values: {
-          ...mountain.values, 
-            altitude: event.target.value,
-        } 
-    })
+    updateMountain((draft)=>{
+      draft.values.altitude = event.target.value;
+      }) 
   }
 
   function handleMountainRangeChange(event) {
-    setMountain({
-      ...mountain, 
-        values: {
-          ...mountain.values, 
-          mountainRange: event.target.value,
-        }
-    })
+    updateMountain((draft)=>{
+      draft.values.mountainRange = event.target.value;
+      })
   }
 
   return (
@@ -74,6 +68,19 @@ export default function Form() {
 
 
 /*
+### Bonus: Updating with the `useImmer` hook
+
+Updating complex states can quickly become difficult. This is where the `useImmer` hook comes in handy.
+
+Refactor the `handle` functions with the help of the `useImmer` hook.
+
+You can use the following hints as guideline:
+
+- `immer` and `useImmer` are already installed, so you just have to import the `useImmer` hook into the [`Form`](components/Form/index.js) component.
+- Update the state declaration: change `setMountain` to `updateMountain` and `useState({...})` to `useImmer({...})`.
+- Rewrite the `handle` functions: use the `draft` object and dot-notation to reach the keys to which you want to assign a new value.
+
+
 ### Updating with Spread Syntax
 
 Write the logic for `handleNameChange`, `handleAltitudeChange`, and `handleMountainRangeChange`.
