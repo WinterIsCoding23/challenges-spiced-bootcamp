@@ -8,7 +8,9 @@ import {useSearchParams} from "next/navigation";
 
 
 export default function Character() {
-  const id = 1;
+  //const id = 1;
+  const router = useRouter();
+  const { id } = router.query; 
 
   const url = `https://swapi.dev/api/people/${id}`;
 
