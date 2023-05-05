@@ -14,10 +14,10 @@ export default function ProductList() {
   return (
     <StyledList>
       {data.map((product) => (
-        <li key={product.id}>
+        <li key={product._id}>
           <StyledButton
             type="button"
-            onClick={() => router.push(`/${product.id}`)}
+            onClick={() => router.push(`/${product._id}`)}
           >
             {product.name}
           </StyledButton>
