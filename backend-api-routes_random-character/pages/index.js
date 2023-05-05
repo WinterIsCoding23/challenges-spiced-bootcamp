@@ -14,7 +14,15 @@ export default function HomePage() {
     return <h1>Something went wrong!</h1>
   }
 
-  return <h1>Hello from Next.js!</h1>;
+  return (
+    <>
+      <h1>{data.character.firstName} {data.character.lastName}</h1>
+      <ul>
+        <li>Twitter name: {data.character.twitterName}</li>
+        <li>GeoHash: {data.character.geoHash}</li>
+      </ul>
+    </>
+  )
 }
 
 
