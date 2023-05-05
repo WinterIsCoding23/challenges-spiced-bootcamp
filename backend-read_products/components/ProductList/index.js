@@ -17,7 +17,7 @@ export default function ProductList() {
         <li key={product._id}>
           <StyledButton
             type="button"
-            onClick={() => router.push(`/${product._id}`)}
+            onClick={() => router.push(`/${product._id}`)}  // _id because id is coming from the database
           >
             {product.name}
           </StyledButton>
