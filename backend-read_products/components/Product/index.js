@@ -22,9 +22,9 @@ export default function Product() {
       </p>
       {data.reviews && 
         <>
-          <p>{reviews.title}</p>
-          <p>{reviews.text}</p>
-          <p>{reviews.rating}</p>
+          <p>{data.reviews.title}</p>
+          <p>{data.reviews.text}</p>
+          <p>{data.reviews.rating}</p>
         </>
       }
       <StyledButton type="button" onClick={() => router.push("/")}>
