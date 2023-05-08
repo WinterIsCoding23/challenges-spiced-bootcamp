@@ -2,10 +2,15 @@
 import dbConnect from "../../../db/connect";
 import Product from "../../../db/models/Product";
 
+import { useRouter } from "next/router";
+
+
+
+const router = useRouter();
+
 export default async function handler(request, response) {
   await dbConnect();
   const { id } = request.query; // slug-id, so not "_id"
-
   //const product = products.find((product) => product._id === id);
 
   if (request.method === "GET"){

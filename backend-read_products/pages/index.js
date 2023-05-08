@@ -12,7 +12,7 @@ const Heading = styled.h1`
 
 export default function HomePage() {
   //imported (lifted up?) from components/ProductForm/index.js
-  async function handleAddProduct(event){
+  //async function handleAddProduct(event){
   const products = useSWR("/api/products");
 
   async function handleSubmit(event) {
@@ -28,8 +28,15 @@ export default function HomePage() {
       },
       body: JSON.stringify(productData),
     });
+
+    if (response.ok) {
+      await response.json();
+      products.mutate();
+      event.target.reset();
+    } else {
+      console.error(response.status);
+    }
   }
-}
 //end of import
 
   return (
