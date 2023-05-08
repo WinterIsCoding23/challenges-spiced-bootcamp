@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import ProductForm from "../ProductForm";
 
 
-export default function Product({onSubmit}) {
+export default function Product({ onSubmit, onDelete }) {
   const [ isEditMode, setIsEditMode ] = useState(false);
   const router = useRouter();
   const { id } = router.query;
@@ -44,6 +44,7 @@ export default function Product({onSubmit}) {
       { isEditMode && (
         <ProductForm onSubmit={onSubmit} isEditMode={isEditMode}/>
       )}
+      <button type="button"onClick={() => onDelete(id)}>Delete product</button>
       <StyledButton type="button" onClick={() => router.push("/")}>
         Back to all
       </StyledButton>

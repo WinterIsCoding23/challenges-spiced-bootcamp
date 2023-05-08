@@ -43,5 +43,27 @@ export default function ProductDetailsPage() {
     <p>Submitting your changes</p>
   )
 
-  return <Product onSubmit={handleEditProduct}/>;
+  // Deleting a product/fish:
+  async function handleDeleteProduct(){
+    const response = await fetch(`/api/products/${id}`, { method: "DELETE" });
+    
+    if (response.ok){
+      await response.json();
+      push("/");
+    }
+
+    if (!response.ok) {
+      console.log(`Error: ${response.status}`);
+    }
+  }
+
+  return <Product onSubmit={handleEditProduct} onDelete={handleDeleteProduct}/>;
 }
+
+/*
+- In the return statement of the `ProductDetailsPage`, pass `handleDeleteProduct` to the `Product` component as a prop called `onDelete`.
+
+- If the `response` is `ok`,
+  - _wait_ for `response.json()` and use `push("/")`. //Sven: not necessary
+- If the `response` is not `ok`, log the `response.status` as an error to the console.
+*/
