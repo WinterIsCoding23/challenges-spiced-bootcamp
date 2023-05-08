@@ -2,12 +2,6 @@
 import dbConnect from "../../../db/connect";
 import Product from "../../../db/models/Product";
 
-import { useRouter } from "next/router";
-
-
-
-const router = useRouter();
-
 export default async function handler(request, response) {
   await dbConnect();
   const { id } = request.query; // slug-id, so not "_id"
@@ -25,8 +19,8 @@ export default async function handler(request, response) {
 }
 
   if (request.method === "PUT") {
-    const productToUpdate = await Product.findByIdAndUpdate(id, { $set: request.body, });
-    response.status(200).json({ status: "Product successfully updated." });
+    const productToUpdate = await Product.findByIdAndUpdate(id, { $set: request.body });
+    response.status(200).json(productToUpdate, { status: "Product successfully updated." });
   }
 }
 

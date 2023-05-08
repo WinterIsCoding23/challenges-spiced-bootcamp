@@ -11,11 +11,11 @@ const Heading = styled.h1`
 `;
 
 export default function HomePage() {
-  //imported (lifted up?) from components/ProductForm/index.js
+  //cut & pasted (= lifted up?) from components/ProductForm/index.js
   //async function handleAddProduct(event){
   const products = useSWR("/api/products");
 
-  async function handleSubmit(event) {
+  async function handleAddProduct(event) {
     event.preventDefault();
 
     const formData = new FormData(event.target);
