@@ -10,7 +10,7 @@ export default function ProductList() {
   if (!data) {
     return <h1>Loading...</h1>;
   }
-
+  console.log("data", data)
   return (
     <StyledList>
       {data.map((product) => (
