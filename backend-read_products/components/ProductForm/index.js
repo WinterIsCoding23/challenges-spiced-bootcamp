@@ -2,7 +2,7 @@ import { StyledForm, StyledHeading, StyledLabel } from "./ProductForm.styled";
 import { StyledButton } from "../Button/Button.styled";
 import useSWR from "swr";
 
-export default function ProductForm({ onSubmit }) {
+export default function ProductForm({ onSubmit, isEditMode }) {
   //const products = useSWR("/api/products");
 
   // async function handleSubmit(event) {
@@ -31,7 +31,7 @@ export default function ProductForm({ onSubmit }) {
 
   return (
     <StyledForm onSubmit={(event)=>onSubmit(event)}>
-      <StyledHeading>Add a new Fish</StyledHeading>
+      <StyledHeading>{isEditMode ? "Update this Fish" :"Add a new Fish"}</StyledHeading>
       <StyledLabel htmlFor="name">
         Name:
         <input type="text" id="name" name="name" />
