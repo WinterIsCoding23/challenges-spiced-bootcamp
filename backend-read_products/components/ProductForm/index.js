@@ -55,3 +55,27 @@ export default function ProductForm() {
     </StyledForm>
   );
 }
+
+/*
+CREATE:
+- There already is a `handleSubmit` function which creates a `productData` object with all relevant data.
+
+Your task is to write a fetch for your newly created `POST` route and send the data to your database.
+
+- Fetch the route `"/api/products"`; `await` the return value and save it in a variable called `response`.
+- As a second argument, pass an object to the `fetch()` method which contains
+  - the `method` set to `POST`,
+  - the `body` set the `JSON.stringify()` of `productData`, and
+  - an `headers` object with `"Content-Type": "application/json"`.
+  - The object should look like the following:
+
+```js
+{
+method: "POST",
+headers: {
+  "Content-Type": "application/json",
+  },
+body: JSON.stringify(productData),
+}
+```
+*/
