@@ -18,4 +18,16 @@ export default async function handler(request, response) {
 
   response.status(200).json(product);
 }
+
+  if (request.method === "PUT") {
+    const productToUpdate = await Product.findByIdAndUpdate(id, { $set: request.body, });
+    response.status(200).json({ status: "Product successfully updated." });
+  }
 }
+
+
+/*
+UPDATE AND DELETE-challenge:
+- _Wait_ for `Product.findByIdAndUpdate(id, { $set: request.body, })`.
+- Respond with a status `200` and the message `{ status: "Product successfully updated." }`.
+*/
