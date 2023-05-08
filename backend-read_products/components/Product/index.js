@@ -20,6 +20,7 @@ export default function Product() {
       <p>
         Price: {data.price} {data.currency}
       </p>
+      <div>
       {data.reviews && 
         <>
           <p>{data.reviews.title}</p>
@@ -27,6 +28,7 @@ export default function Product() {
           <p>{data.reviews.rating}</p>
         </>
       }
+      </div>
       <StyledButton type="button" onClick={() => router.push("/")}>
         Back to all
       </StyledButton>
