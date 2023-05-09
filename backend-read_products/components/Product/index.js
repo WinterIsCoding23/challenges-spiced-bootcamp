@@ -40,11 +40,11 @@ export default function Product({ onSubmit, onDelete }) {
             </ul>        
           </div>
       )}
-      <button type="button" onClick={() => { setIsEditMode(!isEditMode) }}>Edit product</button>
+      <StyledButton type="button" onClick={() => { setIsEditMode(!isEditMode) }}>Edit product</StyledButton>
       { isEditMode && (
         <ProductForm onSubmit={onSubmit} isEditMode={isEditMode}/>
       )}
-      <button type="button"onClick={() => onDelete(id)}>Delete product</button>
+      <StyledButton type="button"onClick={() => onDelete(id)}>Delete product</StyledButton>
       <StyledButton type="button" onClick={() => router.push("/")}>
         Back to all
       </StyledButton>
