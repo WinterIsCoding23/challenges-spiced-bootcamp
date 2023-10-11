@@ -5,7 +5,6 @@ import Product from "../../../db/models/Product";
 export default async function handler(request, response) {
   await dbConnect();
   const { id } = request.query; // slug-id, so not "_id"
-
   //const product = products.find((product) => product._id === id);
 
   if (request.method === "GET"){
@@ -18,4 +17,21 @@ export default async function handler(request, response) {
 
   response.status(200).json(product);
 }
+
+  if (request.method === "PUT") {
+    const productToUpdate = await Product.findByIdAndUpdate(id, { $set: request.body });
+    response.status(200).json(productToUpdate, { status: "Product successfully updated." });
+  }
+
+  if (request.method === "DELETE") {
+    const productToDelete = await Product.findByIdAndDelete(id);
+    response.status(200).json(productToDelete);
+  }
 }
+
+
+/*
+UPDATE AND DELETE-challenge:
+- _Wait_ for `Product.findByIdAndUpdate(id, { $set: request.body, })`.
+- Respond with a status `200` and the message `{ status: "Product successfully updated." }`.
+*/

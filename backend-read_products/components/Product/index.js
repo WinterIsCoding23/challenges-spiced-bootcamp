@@ -3,7 +3,12 @@ import { useRouter } from "next/router";
 import { StyledButton } from "../Button/Button.styled";
 import { ProductCard } from "./Product.styled";
 
-export default function Product() {
+import React, { useState } from "react";
+import ProductForm from "../ProductForm";
+
+
+export default function Product({ onSubmit, onDelete }) {
+  const [ isEditMode, setIsEditMode ] = useState(false);
   const router = useRouter();
   const { id } = router.query;
 
@@ -12,6 +17,7 @@ export default function Product() {
   if (!data) {
     return <h1>Loading...</h1>;
   }
+
 
   return (
     <ProductCard>
@@ -34,6 +40,11 @@ export default function Product() {
             </ul>        
           </div>
       )}
+      <StyledButton type="button" onClick={() => { setIsEditMode(!isEditMode) }}>Edit product</StyledButton>
+      { isEditMode && (
+        <ProductForm onSubmit={onSubmit} isEditMode={isEditMode}/>
+      )}
+      <StyledButton type="button"onClick={() => onDelete(id)}>Delete product</StyledButton>
       <StyledButton type="button" onClick={() => router.push("/")}>
         Back to all
       </StyledButton>
@@ -46,4 +57,6 @@ export default function Product() {
 BONUS:
 - Inside of the return statement, check whether the fetched `data` contain any reviews and if so, display them.
 - Feel free to decide which part of the review data you want to display.
+
+just a test-comment 
 */

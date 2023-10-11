@@ -154,7 +154,7 @@ Switch to [`pages/[id].js`](./pages/%5Bid%5D.js) and write a `handleDeleteProduc
   - an options object `{ method: "DELETE" }`
 - Save the result in a variable called `response`.
 - If the `response` is `ok`,
-  - _wait_ for `response.json()` and use `push("/")`.
+  - _wait_ for `response.json()` and use `push("/")`. //Sven: not necessary
 - If the `response` is not `ok`, log the `response.status` as an error to the console.
 
 - In the return statement of the `ProductDetailsPage`, pass `handleDeleteProduct` to the `Product` component as a prop called `onDelete`.
